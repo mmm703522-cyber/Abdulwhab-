@@ -2,36 +2,35 @@
 using namespace std;
 
 int main() {
-    double consumption;
-    double pricePerUnit;
-    double totalBill;
+    int consumption;
+    int pricePerUnit;
+    int totalBill;
     
-    cout << "ادخل استهلاك الكهرباء (كيلووات ساعة): ";
+    cout << "Enter electricity consumption (units): ";
     cin >> consumption;
     
     if (consumption <= 100) {
-        pricePerUnit = 0.5;
+        pricePerUnit = 250;
     } 
     else if (consumption <= 300) {
-        pricePerUnit = 1.0;
+        pricePerUnit = 300;
     } 
     else {
-        pricePerUnit = 1.5;
+        pricePerUnit = 350;
     }
     
     totalBill = consumption * pricePerUnit;
     
-    cout << "\nالاستهلاك: " << consumption << " كيلووات ساعة\n";
-    cout << "سعر الوحدة: " << pricePerUnit << " دينار\n";
-    cout << "الفاتورة الكلية: " << totalBill << " دينار\n";
+    cout << "\nElectricity consumption: " << consumption << " units\n";
+    cout << "Price per unit: " << pricePerUnit << " IQD\n";
+    cout << "Total bill: " << totalBill << " IQD\n";
     
-    if (totalBill > 300) {
-        cout << "الاستهلاك عالي\n";
+    if (totalBill > 100000) {
+        cout << "High consumption - Please reduce usage\n";
     } 
     else {
-        cout << "الاستهلاك طبيعي\n";
+        cout << "Normal consumption\n";
     }
     
     return 0;
 }
-
